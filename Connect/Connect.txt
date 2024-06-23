@@ -1,0 +1,8 @@
+cobi-mysql01.betika.private
+coms-mysql01.betika.private
+gcss-mysql-cobi.pepeta.private
+gcss-mysql-coms.pepeta.private
+3306
+kmatebane
+p!rnP!XpDdQOh0sukCjx
+betika_bi_gh
