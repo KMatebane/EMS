@@ -244,3 +244,21 @@ package_name = title+'_'+serial+'_'+date+'.zip'
 file_size = os.path.getsize(file_path)
 chunk_size = os.path.getsize(zip_path)
 offset = 0
+
+reqUrl = "http://localhost:14077/ems/trigger/"
+
+post_files = {
+  "file": open(file_path, "rb"),
+}
+headersList = {"Accept": "*/*",
+               "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+               "Content-Type": "multipart/form-data; boundary=kljmyvW1ndjXaOEAg4vPm6RBUqO6MC5A"}
+
+payload = {'packageName': package_name,
+           'size': file_size,
+           'chunkSize': chunk_size,
+           'offSet': offset}
+
+response = requests.request("GET", reqUrl, data=payload, files=post_files, headers=headersList)
+
+print(response.text)
