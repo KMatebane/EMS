@@ -24,10 +24,6 @@ Root = os.path.normpath(os.getcwd() + os.sep + os.pardir)
 file = open(Root + '/Connect/Connect.txt', 'r')
 text = file.readlines()
 
-# Code To Connect MySQL
-file = open('/Users/katlegomatebane/Documents/Connect/Connect.txt', 'r')
-text = file.readlines()
-
 cobi_betika = mysql.connector.connect(host=text[0].strip()
                                       ,database=text[7].strip()
                                       ,user=text[5].strip()
